@@ -17,3 +17,26 @@ under failure.
 
 [Talk on QCon SF](https://qconsf.com/presentation/nov2025/architecting-centralized-platform-data-deletion-netflix) ·
 [InfoQ write-up](https://www.infoq.com/news/2025/11/netflix-data-deletion/)
+
+<div class="photo-grid">
+  <figure>
+    <img src="/assets/qcon-2025-stage-1.jpg" alt="Vidhya Arvind on stage at QCon SF 2025 — Earn Trust slide">
+    <figcaption>On stage with Shawn Liu — &ldquo;Earn Trust: Rigorous and Visible Audit &amp; Validation&rdquo;</figcaption>
+  </figure>
+  <figure>
+    <img src="/assets/qcon-2025-stage-2.jpg" alt="Vidhya Arvind on stage at QCon SF 2025">
+    <figcaption>QCon SF 2025 &middot; Ballroom A</figcaption>
+  </figure>
+  <figure>
+    <img src="/assets/qcon-2025-with-shawn-1.jpg" alt="Vidhya Arvind speaking at QCon SF 2025">
+    <figcaption>Mid-talk</figcaption>
+  </figure>
+  <figure>
+    <img src="/assets/qcon-2025-with-shawn-2.jpg" alt="Vidhya Arvind and Shawn Liu at QCon SF 2025">
+    <figcaption>With Shawn Liu</figcaption>
+  </figure>
+</div>
+
+<p class="photo-credit">
+  Photos by <a href="https://www.flickr.com/photos/qconpictures/albums/72177720330815569/">QCon Pictures</a>.
+</p>

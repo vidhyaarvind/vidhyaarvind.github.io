@@ -51,16 +51,22 @@ I've spoken at QCon San Francisco, Cassandra Summit, Austin API Summit,
 Nordic APIs, the Future of Memory & Storage Summit, and Girl Geek X. The
 full list lives on the [talks page](/talks/).
 
-<div class="photo-grid">
-  <figure>
-    <img src="/assets/qcon-2024.png" alt="QCon SF 2024">
-    <figcaption>QCon SF 2024 — Write-Ahead Logging</figcaption>
-  </figure>
-  <figure>
-    <img src="/assets/qcon-2025.jpeg" alt="QCon SF 2025">
-    <figcaption>QCon SF 2025 — Data Deletion at Netflix</figcaption>
-  </figure>
+<div class="photo-gallery">
+  <a href="https://www.flickr.com/photos/qconpictures/albums/72177720330815569/"><img src="/assets/qcon-2025-stage-1.jpg" alt="QCon SF 2025 — Data Deletion at Netflix"></a>
+  <a href="https://www.flickr.com/photos/qconpictures/albums/72177720330815569/"><img src="/assets/qcon-2025-with-shawn-2.jpg" alt="QCon SF 2025 with Shawn Liu"></a>
+  <a href="https://www.flickr.com/photos/qconpictures/albums/72177720330815569/"><img src="/assets/qcon-2025-stage-2.jpg" alt="QCon SF 2025"></a>
+  <a href="https://www.flickr.com/photos/qconpictures/albums/72177720330815569/"><img src="/assets/qcon-2025-with-shawn-1.jpg" alt="QCon SF 2025"></a>
+  <a href="https://www.flickr.com/photos/qconpictures/albums/72177720322828804/"><img src="/assets/qcon-2024-stage-1.jpg" alt="QCon SF 2024 — Write-Ahead Logging, with Prudhviraj Karumanchi"></a>
+  <a href="https://www.flickr.com/photos/qconpictures/albums/72177720322828804/"><img src="/assets/qcon-2024-stage-2.jpg" alt="QCon SF 2024"></a>
+  <a href="https://www.flickr.com/photos/qconpictures/albums/72177720322828804/"><img src="/assets/qcon-2024-stage-3.jpg" alt="QCon SF 2024"></a>
+  <a href="https://www.flickr.com/photos/qconpictures/albums/72177720322828804/"><img src="/assets/qcon-2024-stage-4.jpg" alt="QCon SF 2024"></a>
 </div>
+
+<p class="photo-credit">
+  Photos by QCon Pictures
+  (<a href="https://www.flickr.com/photos/qconpictures/albums/72177720330815569/">2025</a>,
+  <a href="https://www.flickr.com/photos/qconpictures/albums/72177720322828804/">2024</a>).
+</p>
 
 ## Background
 

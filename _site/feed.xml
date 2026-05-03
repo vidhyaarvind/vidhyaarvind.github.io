@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2026-05-03T12:39:37-07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Vidhya Arvind</title><subtitle>Staff Software Engineer at Netflix and founding architect of Netflix&apos;s Data Abstraction Platform. I write and speak about distributed databases, data abstractions, and platform engineering at scale.</subtitle><author><name>Vidhya Arvind</name></author><entry><title type="html">Architecting a Centralized Platform for Data Deletion at Netflix</title><link href="http://localhost:4000/2025/11/17/qcon-sf-data-deletion/" rel="alternate" type="text/html" title="Architecting a Centralized Platform for Data Deletion at Netflix" /><published>2025-11-17T15:55:00-08:00</published><updated>2025-11-17T15:55:00-08:00</updated><id>http://localhost:4000/2025/11/17/qcon-sf-data-deletion</id><content type="html" xml:base="http://localhost:4000/2025/11/17/qcon-sf-data-deletion/"><![CDATA[<p>How do you safely manage data deletion across a fleet of diverse data stores,
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2026-05-03T13:13:52-07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Vidhya Arvind</title><subtitle>Staff Software Engineer at Netflix and founding architect of Netflix&apos;s Data Abstraction Platform. I write and speak about distributed databases, data abstractions, and platform engineering at scale.</subtitle><author><name>Vidhya Arvind</name></author><entry><title type="html">Architecting a Centralized Platform for Data Deletion at Netflix</title><link href="http://localhost:4000/2025/11/17/qcon-sf-data-deletion/" rel="alternate" type="text/html" title="Architecting a Centralized Platform for Data Deletion at Netflix" /><published>2025-11-17T15:55:00-08:00</published><updated>2025-11-17T15:55:00-08:00</updated><id>http://localhost:4000/2025/11/17/qcon-sf-data-deletion</id><content type="html" xml:base="http://localhost:4000/2025/11/17/qcon-sf-data-deletion/"><![CDATA[<p>How do you safely manage data deletion across a fleet of diverse data stores,
 at Netflix scale? In this QCon San Francisco 2025 talk, Shawn Liu and I
 present a centralized, extensible platform that owns the end-to-end data
 deletion lifecycle: from identifying data, to executing deletion across
@@ -9,7 +9,30 @@ the design, and the resilience patterns that keep the platform reliable
 under failure.</p>
 
 <p><a href="https://qconsf.com/presentation/nov2025/architecting-centralized-platform-data-deletion-netflix">Talk on QCon SF</a> ·
-<a href="https://www.infoq.com/news/2025/11/netflix-data-deletion/">InfoQ write-up</a></p>]]></content><author><name>Vidhya Arvind</name></author><category term="talks" /><summary type="html"><![CDATA[How do you safely manage data deletion across a fleet of diverse data stores, at Netflix scale? In this QCon San Francisco 2025 talk, Shawn Liu and I present a centralized, extensible platform that owns the end-to-end data deletion lifecycle: from identifying data, to executing deletion across heterogeneous backends, to verifying it actually happened.]]></summary></entry><entry><title type="html">Resilient Cassandra: Intelligent Backpressure Using Resource Utilization and Queueing Metrics</title><link href="http://localhost:4000/2025/08/12/uber-cassandra-meetup-load-shedding/" rel="alternate" type="text/html" title="Resilient Cassandra: Intelligent Backpressure Using Resource Utilization and Queueing Metrics" /><published>2025-08-12T17:30:00-07:00</published><updated>2025-08-12T17:30:00-07:00</updated><id>http://localhost:4000/2025/08/12/uber-cassandra-meetup-load-shedding</id><content type="html" xml:base="http://localhost:4000/2025/08/12/uber-cassandra-meetup-load-shedding/"><![CDATA[<p>A talk at the Apache Cassandra Meetup hosted by Uber Engineering in
+<a href="https://www.infoq.com/news/2025/11/netflix-data-deletion/">InfoQ write-up</a></p>
+
+<div class="photo-grid">
+  <figure>
+    <img src="/assets/qcon-2025-stage-1.jpg" alt="Vidhya Arvind on stage at QCon SF 2025 — Earn Trust slide" />
+    <figcaption>On stage with Shawn Liu — &ldquo;Earn Trust: Rigorous and Visible Audit &amp; Validation&rdquo;</figcaption>
+  </figure>
+  <figure>
+    <img src="/assets/qcon-2025-stage-2.jpg" alt="Vidhya Arvind on stage at QCon SF 2025" />
+    <figcaption>QCon SF 2025 &middot; Ballroom A</figcaption>
+  </figure>
+  <figure>
+    <img src="/assets/qcon-2025-with-shawn-1.jpg" alt="Vidhya Arvind speaking at QCon SF 2025" />
+    <figcaption>Mid-talk</figcaption>
+  </figure>
+  <figure>
+    <img src="/assets/qcon-2025-with-shawn-2.jpg" alt="Vidhya Arvind and Shawn Liu at QCon SF 2025" />
+    <figcaption>With Shawn Liu</figcaption>
+  </figure>
+</div>
+
+<p class="photo-credit">
+  Photos by <a href="https://www.flickr.com/photos/qconpictures/albums/72177720330815569/">QCon Pictures</a>.
+</p>]]></content><author><name>Vidhya Arvind</name></author><category term="talks" /><summary type="html"><![CDATA[How do you safely manage data deletion across a fleet of diverse data stores, at Netflix scale? In this QCon San Francisco 2025 talk, Shawn Liu and I present a centralized, extensible platform that owns the end-to-end data deletion lifecycle: from identifying data, to executing deletion across heterogeneous backends, to verifying it actually happened.]]></summary></entry><entry><title type="html">Resilient Cassandra: Intelligent Backpressure Using Resource Utilization and Queueing Metrics</title><link href="http://localhost:4000/2025/08/12/uber-cassandra-meetup-load-shedding/" rel="alternate" type="text/html" title="Resilient Cassandra: Intelligent Backpressure Using Resource Utilization and Queueing Metrics" /><published>2025-08-12T17:30:00-07:00</published><updated>2025-08-12T17:30:00-07:00</updated><id>http://localhost:4000/2025/08/12/uber-cassandra-meetup-load-shedding</id><content type="html" xml:base="http://localhost:4000/2025/08/12/uber-cassandra-meetup-load-shedding/"><![CDATA[<p>A talk at the Apache Cassandra Meetup hosted by Uber Engineering in
 Sunnyvale on August 12, 2025.</p>
 
 <p>Protecting Cassandra from overload is harder than it looks. CPU and
@@ -35,7 +58,32 @@ data stores.</p>
 corruption, multi-partition mutations, and replication gaps — and the
 strategic trade-offs we considered when designing for Netflix’s scale.</p>
 
-<p><a href="https://www.infoq.com/presentations/netflix-write-ahead-logging/">Video on InfoQ</a></p>]]></content><author><name>Vidhya Arvind</name></author><category term="talks" /><summary type="html"><![CDATA[Modern database durability guarantees are often insufficient during extended system outages or data corruption scenarios. In this QCon San Francisco 2024 talk I walk through Netflix’s journey to enhanced data durability and reliability through a Write-Ahead Logging (WAL) layer that sits above our data stores.]]></summary></entry><entry><title type="html">How Netflix Handles C* Tombstones at Scale &amp;amp; SLO-based Data Retrieval and Back Pressure</title><link href="http://localhost:4000/2024/10/11/netflix-cassandra-meetup-tombstones-backpressure/" rel="alternate" type="text/html" title="How Netflix Handles C* Tombstones at Scale &amp;amp; SLO-based Data Retrieval and Back Pressure" /><published>2024-10-11T17:00:00-07:00</published><updated>2024-10-11T17:00:00-07:00</updated><id>http://localhost:4000/2024/10/11/netflix-cassandra-meetup-tombstones-backpressure</id><content type="html" xml:base="http://localhost:4000/2024/10/11/netflix-cassandra-meetup-tombstones-backpressure/"><![CDATA[<p>A talk at the Apache Cassandra Bay Area meetup, hosted at Netflix’s Los
+<p>Co-presented with Prudhviraj Karumanchi.</p>
+
+<p><a href="https://www.infoq.com/presentations/netflix-write-ahead-logging/">Video on InfoQ</a></p>
+
+<div class="photo-grid">
+  <figure>
+    <img src="/assets/qcon-2024-stage-1.jpg" alt="Vidhya Arvind and Prudhviraj Karumanchi on stage at QCon SF 2024" />
+    <figcaption>On stage with Prudhviraj Karumanchi</figcaption>
+  </figure>
+  <figure>
+    <img src="/assets/qcon-2024-stage-2.jpg" alt="QCon SF 2024 — WAL talk" />
+    <figcaption>QCon SF 2024 &middot; Ballroom A</figcaption>
+  </figure>
+  <figure>
+    <img src="/assets/qcon-2024-stage-3.jpg" alt="QCon SF 2024 — WAL talk" />
+    <figcaption>Mid-talk</figcaption>
+  </figure>
+  <figure>
+    <img src="/assets/qcon-2024-stage-4.jpg" alt="QCon SF 2024 — WAL talk" />
+    <figcaption>Audience Q&amp;A</figcaption>
+  </figure>
+</div>
+
+<p class="photo-credit">
+  Photos by <a href="https://www.flickr.com/photos/qconpictures/albums/72177720322828804/">QCon Pictures</a>.
+</p>]]></content><author><name>Vidhya Arvind</name></author><category term="talks" /><summary type="html"><![CDATA[Modern database durability guarantees are often insufficient during extended system outages or data corruption scenarios. In this QCon San Francisco 2024 talk I walk through Netflix’s journey to enhanced data durability and reliability through a Write-Ahead Logging (WAL) layer that sits above our data stores.]]></summary></entry><entry><title type="html">How Netflix Handles C* Tombstones at Scale &amp;amp; SLO-based Data Retrieval and Back Pressure</title><link href="http://localhost:4000/2024/10/11/netflix-cassandra-meetup-tombstones-backpressure/" rel="alternate" type="text/html" title="How Netflix Handles C* Tombstones at Scale &amp;amp; SLO-based Data Retrieval and Back Pressure" /><published>2024-10-11T17:00:00-07:00</published><updated>2024-10-11T17:00:00-07:00</updated><id>http://localhost:4000/2024/10/11/netflix-cassandra-meetup-tombstones-backpressure</id><content type="html" xml:base="http://localhost:4000/2024/10/11/netflix-cassandra-meetup-tombstones-backpressure/"><![CDATA[<p>A talk at the Apache Cassandra Bay Area meetup, hosted at Netflix’s Los
 Gatos campus on October 11, 2024. Two topics in one slot:</p>
 
 <ul>

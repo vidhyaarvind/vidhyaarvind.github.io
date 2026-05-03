@@ -377,7 +377,7 @@ th {
 /* ---------- Photo gallery ---------- */
 .photo-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 0.9rem;
   margin: 1.6em 0;
 }
@@ -387,18 +387,68 @@ th {
   text-align: center;
 }
 
+.photo-grid a {
+  display: block;
+  border-bottom: none;
+}
+
 .photo-grid img {
   width: 100%;
-  height: 200px;
+  height: 220px;
   object-fit: cover;
   border-radius: 6px;
   border: 1px solid var(--border);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.photo-grid a:hover img {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
 .photo-grid figcaption {
   margin-top: 0.4em;
   font-family: var(--font-sans);
   font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+/* Caption-free variant — huyenchip /events/ style */
+.photo-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 0.7rem;
+  margin: 1.8em 0;
+}
+
+.photo-gallery a {
+  display: block;
+  border-bottom: none;
+}
+
+.photo-gallery img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.photo-gallery a:hover img {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.photo-credit {
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  text-align: right;
+  margin: 0.4em 0 1.5em;
+}
+
+.photo-credit a {
   color: var(--text-muted);
 }
 
