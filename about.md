@@ -4,11 +4,73 @@ title: About
 permalink: /about/
 ---
 
-## Hi there! 👋
+<section class="bio">
+  <img class="bio-photo" src="/assets/profile_picture.jpeg" alt="Vidhya Arvind">
+  <div class="bio-text">
+    <p>
+      I'm a <a href="https://www.linkedin.com/in/vidhya-arvind-11908723/">Staff Software Engineer, Data Abstractions</a>
+      at Netflix and a founding architect of Netflix's Data Abstraction
+      Platform. My team builds the storage primitives — KeyValue, TimeSeries,
+      Tree, Graph, Table Metadata, and more — that sit between hundreds of
+      Netflix services and the distributed databases that power them.
+    </p>
+  </div>
+</section>
 
-<img src="/assets/profile_picture.jpeg" />
+## What I work on
 
+The Data Abstraction Platform decouples application developers from the
+specifics of any one database. Behind a small set of clean APIs, the platform
+handles partitioning, bucketing, replication, durability, and lifecycle
+concerns so product teams can move fast without re-learning Cassandra,
+EVCache, Dynomite, or whatever store sits underneath. A few areas I've
+focused on:
 
-I am a Staff software engineer and founding member of Netflix’s data abstraction platform, which supports common patterns including KeyValue, Tree, TimeSeries, Table Metadata, and more. I love learning, debugging, scaling systems, and solving hard problems. I currently spend most of my time providing scalable abstractions for thousands of developers at Netflix.
+- **Reliable APIs at petabyte scale.** Idempotent writes, novel bucketing
+  algorithms, and table layouts that keep partitions small even when data
+  grows unbounded.
+- **Beyond durability with Write-Ahead Logging.** A WAL layer that protects
+  against multi-partition failures, replication gaps, and silent corruption —
+  the kinds of problems that break the assumptions of "the database
+  guarantees it."
+- **Centralized data deletion.** A platform that handles the end-to-end
+  lifecycle of removing user data across heterogeneous stores, from discovery
+  through verified deletion.
 
-You can find links to some of my [projects](https://github.com/vidhyaarvind) and [talks](/)
+## Writing
+
+I've authored, co-authored, and contributed to several Netflix TechBlog
+posts on the data abstraction platform — Write-Ahead Log resilience, the
+Key-Value abstraction (lead author), Data Gateway, and the Graph
+abstraction. The full list with summaries lives on the
+[writing page](/writing/).
+
+## Speaking
+
+I've spoken at QCon San Francisco, Cassandra Summit, Austin API Summit,
+Nordic APIs, the Future of Memory & Storage Summit, and Girl Geek X. The
+full list lives on the [talks page](/talks/).
+
+<div class="photo-grid">
+  <figure>
+    <img src="/assets/qcon-2024.png" alt="QCon SF 2024">
+    <figcaption>QCon SF 2024 — Write-Ahead Logging</figcaption>
+  </figure>
+  <figure>
+    <img src="/assets/qcon-2025.jpeg" alt="QCon SF 2025">
+    <figcaption>QCon SF 2025 — Data Deletion at Netflix</figcaption>
+  </figure>
+</div>
+
+## Background
+
+Before Netflix, I worked on storage and platform problems at **Box** and
+**Verizon**. I love debugging gnarly distributed-systems failures, designing
+APIs that age well, and turning hard storage problems into simple primitives
+other engineers can build on.
+
+## Elsewhere
+
+- [GitHub](https://github.com/vidhyaarvind)
+- [LinkedIn](https://www.linkedin.com/in/vidhya-arvind-11908723/)
+- [Twitter / X](https://twitter.com/vidhyaarvind)

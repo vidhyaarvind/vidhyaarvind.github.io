@@ -1,0 +1,472 @@
+@charset "UTF-8";
+/* ==========================================================================
+   Vidhya Arvind — site styles
+   Single-column, content-first, auto dark mode.
+   ========================================================================== */
+:root {
+  --max-width: 720px;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+               "Helvetica Neue", Arial, sans-serif;
+  --font-serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia,
+                "Times New Roman", serif;
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
+               "Liberation Mono", monospace;
+  --bg: #ffffff;
+  --bg-soft: #fafafa;
+  --text: #1f1f1f;
+  --text-muted: #6a6a6a;
+  --border: #e6e6e6;
+  --link: #b8002f; /* warm red, echoes huyenchip.com */
+  --link-hover: #7d0020;
+  --accent: #f7f3ee; /* parchment */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0e0e10;
+    --bg-soft: #161618;
+    --text: #ececec;
+    --text-muted: #9a9a9a;
+    --border: #2a2a2d;
+    --link: #ff6478;
+    --link-hover: #ff97a6;
+    --accent: #1b1b1f;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-serif);
+  font-size: 18px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+a:hover {
+  color: var(--link-hover);
+  border-bottom-color: currentColor;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 2.2em 0 0.6em;
+  letter-spacing: -0.01em;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 1.45rem;
+}
+
+h3 {
+  font-size: 1.15rem;
+}
+
+p, ul, ol {
+  margin: 0 0 1.1em;
+}
+
+code {
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+  background: var(--accent);
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+}
+
+pre {
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1em;
+  overflow-x: auto;
+}
+
+pre code {
+  background: none;
+  padding: 0;
+}
+
+blockquote {
+  border-left: 3px solid var(--border);
+  margin: 1.4em 0;
+  padding: 0.2em 1.2em;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: var(--border);
+  margin: 3em 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5em 0;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+}
+
+th, td {
+  padding: 0.55em 0.6em;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+/* ---------- Site header ---------- */
+.site-header {
+  border-bottom: 1px solid var(--border);
+  background: var(--bg);
+}
+
+.site-nav {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+  font-family: var(--font-sans);
+}
+
+.site-title {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--text);
+  border-bottom: none;
+  letter-spacing: -0.01em;
+}
+
+.site-title:hover {
+  color: var(--link);
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.nav-link {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  border-bottom: none;
+}
+
+.nav-link:hover {
+  color: var(--link);
+}
+
+/* ---------- Main content ---------- */
+.content {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 3rem 1.25rem 1rem;
+}
+
+/* ---------- Home / bio ---------- */
+.bio {
+  display: flex;
+  gap: 1.6rem;
+  align-items: flex-start;
+  margin-bottom: 2.2rem;
+  flex-wrap: wrap;
+}
+
+.bio-photo {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.bio-text {
+  flex: 1;
+  min-width: 240px;
+}
+
+.bio-text h1 {
+  margin: 0 0 0.4em;
+  font-size: 1.7rem;
+}
+
+.bio-text p {
+  margin: 0 0 0.8em;
+}
+
+.section {
+  margin-top: 2.5rem;
+}
+
+.section-heading {
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.4em;
+  margin-bottom: 1em;
+}
+
+.section-more {
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  margin-top: 0.4rem;
+}
+
+/* ---------- Post lists ---------- */
+.post-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.post-list li {
+  display: flex;
+  gap: 1rem;
+  padding: 0.45em 0;
+  align-items: baseline;
+  border-bottom: 1px dashed var(--border);
+}
+
+.post-list li:last-child {
+  border-bottom: none;
+}
+
+.post-meta {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+  min-width: 4em;
+}
+
+.post-link {
+  color: var(--text);
+  border-bottom: none;
+}
+
+.post-link:hover {
+  color: var(--link);
+}
+
+/* ---------- Post / page ---------- */
+.post-header {
+  margin-bottom: 2rem;
+}
+
+.post-title {
+  margin: 0 0 0.4em;
+}
+
+.post-header .post-meta {
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  color: var(--text-muted);
+}
+
+.post-content img {
+  display: block;
+  margin: 1.4em auto;
+  border-radius: 4px;
+}
+
+.post-back {
+  margin-top: 3rem;
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+}
+
+.page-title {
+  margin-bottom: 1.4rem;
+}
+
+/* ---------- Talks page ---------- */
+.talks-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.talks-list li {
+  display: grid;
+  grid-template-columns: 4em 1fr;
+  gap: 1.1rem;
+  padding: 1em 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.talks-list .talk-year {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  padding-top: 0.2em;
+}
+
+.talks-list .talk-venue {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.15em;
+}
+
+.talks-list .talk-title {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.talks-list .talk-title:hover {
+  color: var(--link);
+}
+
+.talks-list .talk-links {
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  margin-top: 0.3em;
+  color: var(--text-muted);
+}
+
+.talks-list .talk-links a {
+  margin-right: 1em;
+}
+
+/* ---------- Photo gallery ---------- */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.9rem;
+  margin: 1.6em 0;
+}
+
+.photo-grid figure {
+  margin: 0;
+  text-align: center;
+}
+
+.photo-grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+}
+
+.photo-grid figcaption {
+  margin-top: 0.4em;
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  border-top: 1px solid var(--border);
+  margin-top: 4rem;
+  padding: 2rem 1.25rem;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.footer-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.footer-tagline {
+  margin: 0 0 0.8em;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0.8em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-links a {
+  color: var(--text-muted);
+  border-bottom: none;
+}
+
+.footer-links a:hover {
+  color: var(--link);
+}
+
+.footer-copy {
+  margin: 0;
+  font-size: 0.82rem;
+  opacity: 0.8;
+}
+
+/* ---------- Responsive tweaks ---------- */
+@media (max-width: 540px) {
+  body {
+    font-size: 17px;
+  }
+  .bio {
+    gap: 1.1rem;
+  }
+  .bio-photo {
+    width: 110px;
+    height: 110px;
+  }
+  .bio-text h1 {
+    font-size: 1.45rem;
+  }
+  .post-list li {
+    flex-direction: column;
+    gap: 0.1rem;
+  }
+  .talks-list li {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

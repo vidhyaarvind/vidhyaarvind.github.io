@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Beyond Durability: Database Resilience with Write-Ahead Logging at Netflix | Vidhya Arvind</title>
+<meta name="generator" content="Jekyll v4.3.3" />
+<meta property="og:title" content="Beyond Durability: Database Resilience with Write-Ahead Logging at Netflix" />
+<meta name="author" content="Vidhya Arvind" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Modern database durability guarantees are often insufficient during extended system outages or data corruption scenarios. In this QCon San Francisco 2024 talk I walk through Netflix’s journey to enhanced data durability and reliability through a Write-Ahead Logging (WAL) layer that sits above our data stores." />
+<meta property="og:description" content="Modern database durability guarantees are often insufficient during extended system outages or data corruption scenarios. In this QCon San Francisco 2024 talk I walk through Netflix’s journey to enhanced data durability and reliability through a Write-Ahead Logging (WAL) layer that sits above our data stores." />
+<link rel="canonical" href="http://localhost:4000/2024/11/19/qcon-sf-write-ahead-logging/" />
+<meta property="og:url" content="http://localhost:4000/2024/11/19/qcon-sf-write-ahead-logging/" />
+<meta property="og:site_name" content="Vidhya Arvind" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-11-19T10:35:00-08:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Beyond Durability: Database Resilience with Write-Ahead Logging at Netflix" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Vidhya Arvind"},"dateModified":"2024-11-19T10:35:00-08:00","datePublished":"2024-11-19T10:35:00-08:00","description":"Modern database durability guarantees are often insufficient during extended system outages or data corruption scenarios. In this QCon San Francisco 2024 talk I walk through Netflix’s journey to enhanced data durability and reliability through a Write-Ahead Logging (WAL) layer that sits above our data stores.","headline":"Beyond Durability: Database Resilience with Write-Ahead Logging at Netflix","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2024/11/19/qcon-sf-write-ahead-logging/"},"url":"http://localhost:4000/2024/11/19/qcon-sf-write-ahead-logging/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/css/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Vidhya Arvind" /><link rel="icon" type="image/png" href="/assets/profile_picture.png">
+</head>
+<body><header class="site-header">
+  <nav class="site-nav">
+    <a class="site-title" href="/">Vidhya Arvind</a>
+    <div class="nav-links"><a class="nav-link" href="/about/">About</a><a class="nav-link" href="/writing/">Writing</a><a class="nav-link" href="/talks/">Talks</a><a class="nav-link" href="https://github.com/vidhyaarvind" rel="me noopener">GitHub</a><a class="nav-link" href="https://www.linkedin.com/in/vidhya-arvind-11908723/" rel="me noopener">LinkedIn</a></div>
+  </nav>
+</header>
+<main class="content" aria-label="Content">
+      <article class="post">
+  <header class="post-header">
+    <h1 class="post-title">Beyond Durability: Database Resilience with Write-Ahead Logging at Netflix</h1>
+    <p class="post-meta">
+      <time datetime="2024-11-19T10:35:00-08:00">
+        November 19, 2024
+      </time>
+      
+        &middot;
+        
+          <span class="post-category">talks</span>
+        
+      
+    </p>
+  </header>
+
+  <div class="post-content">
+    <p>Modern database durability guarantees are often insufficient during extended
+system outages or data corruption scenarios. In this QCon San Francisco 2024
+talk I walk through Netflix’s journey to enhanced data durability and
+reliability through a Write-Ahead Logging (WAL) layer that sits above our
+data stores.</p>
+
+<p>The talk covers how WAL addresses critical challenges like data loss,
+corruption, multi-partition mutations, and replication gaps — and the
+strategic trade-offs we considered when designing for Netflix’s scale.</p>
+
+<p><a href="https://www.infoq.com/presentations/netflix-write-ahead-logging/">Video on InfoQ</a></p>
+
+  </div>
+
+  <p class="post-back"><a href="/talks/">&larr; All talks</a></p>
+</article>
+
+    </main><footer class="site-footer">
+  <div class="footer-inner">
+    <p class="footer-tagline">Staff Software Engineer at Netflix and founding architect of Netflix&#39;s Data Abstraction Platform. I write and speak about distributed databases, data abstractions, and platform engineering at scale.</p>
+    <ul class="footer-links">
+      
+        <li><a href="https://github.com/vidhyaarvind" rel="me noopener">GitHub</a></li>
+      
+      
+        <li><a href="https://www.linkedin.com/in/vidhya-arvind-11908723/" rel="me noopener">LinkedIn</a></li>
+      
+      
+        <li><a href="https://twitter.com/vidhyaarvind" rel="me noopener">Twitter</a></li>
+      
+      <li><a href="/feed.xml">RSS</a></li>
+    </ul>
+    <p class="footer-copy">&copy; 2026 Vidhya Arvind.</p>
+  </div>
+</footer>
+</body>
+</html>

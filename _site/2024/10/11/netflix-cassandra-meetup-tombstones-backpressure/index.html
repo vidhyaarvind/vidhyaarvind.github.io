@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>How Netflix Handles C* Tombstones at Scale &amp; SLO-based Data Retrieval and Back Pressure | Vidhya Arvind</title>
+<meta name="generator" content="Jekyll v4.3.3" />
+<meta property="og:title" content="How Netflix Handles C* Tombstones at Scale &amp; SLO-based Data Retrieval and Back Pressure" />
+<meta name="author" content="Vidhya Arvind" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A talk at the Apache Cassandra Bay Area meetup, hosted at Netflix’s Los Gatos campus on October 11, 2024. Two topics in one slot:" />
+<meta property="og:description" content="A talk at the Apache Cassandra Bay Area meetup, hosted at Netflix’s Los Gatos campus on October 11, 2024. Two topics in one slot:" />
+<link rel="canonical" href="http://localhost:4000/2024/10/11/netflix-cassandra-meetup-tombstones-backpressure/" />
+<meta property="og:url" content="http://localhost:4000/2024/10/11/netflix-cassandra-meetup-tombstones-backpressure/" />
+<meta property="og:site_name" content="Vidhya Arvind" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-10-11T17:00:00-07:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="How Netflix Handles C* Tombstones at Scale &amp; SLO-based Data Retrieval and Back Pressure" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Vidhya Arvind"},"dateModified":"2024-10-11T17:00:00-07:00","datePublished":"2024-10-11T17:00:00-07:00","description":"A talk at the Apache Cassandra Bay Area meetup, hosted at Netflix’s Los Gatos campus on October 11, 2024. Two topics in one slot:","headline":"How Netflix Handles C* Tombstones at Scale &amp; SLO-based Data Retrieval and Back Pressure","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2024/10/11/netflix-cassandra-meetup-tombstones-backpressure/"},"url":"http://localhost:4000/2024/10/11/netflix-cassandra-meetup-tombstones-backpressure/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/css/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Vidhya Arvind" /><link rel="icon" type="image/png" href="/assets/profile_picture.png">
+</head>
+<body><header class="site-header">
+  <nav class="site-nav">
+    <a class="site-title" href="/">Vidhya Arvind</a>
+    <div class="nav-links"><a class="nav-link" href="/about/">About</a><a class="nav-link" href="/writing/">Writing</a><a class="nav-link" href="/talks/">Talks</a><a class="nav-link" href="https://github.com/vidhyaarvind" rel="me noopener">GitHub</a><a class="nav-link" href="https://www.linkedin.com/in/vidhya-arvind-11908723/" rel="me noopener">LinkedIn</a></div>
+  </nav>
+</header>
+<main class="content" aria-label="Content">
+      <article class="post">
+  <header class="post-header">
+    <h1 class="post-title">How Netflix Handles C* Tombstones at Scale &amp; SLO-based Data Retrieval and Back Pressure</h1>
+    <p class="post-meta">
+      <time datetime="2024-10-11T17:00:00-07:00">
+        October 11, 2024
+      </time>
+      
+        &middot;
+        
+          <span class="post-category">talks</span>
+        
+      
+    </p>
+  </header>
+
+  <div class="post-content">
+    <p>A talk at the Apache Cassandra Bay Area meetup, hosted at Netflix’s Los
+Gatos campus on October 11, 2024. Two topics in one slot:</p>
+
+<ul>
+  <li><strong>Tombstones at scale</strong> — what tombstones cost when you’re operating
+petabyte-scale Cassandra clusters across hundreds of use cases, and the
+techniques the Data Abstraction platform uses to keep them under
+control.</li>
+  <li><strong>SLO-based data retrieval and back pressure</strong> — how Netflix uses
+service-level objectives, not raw timeouts, to drive read paths and
+to push back on overloaded clusters before they tip over.</li>
+</ul>
+
+<p>The full meetup also featured Chris Lohfink (Netflix) &amp; Jaydeepkumar
+Chovatia (Uber) on incremental repair scheduling, Patrick McFadin
+(DataStax) on vector search in Cassandra 5, and Dinesh Joshi (Apple) on
+secure analytics with the Cassandra Sidecar.</p>
+
+<p><a href="https://www.youtube.com/watch?v=n_SXhW-x0WA">Video on YouTube</a> ·
+<a href="https://www.meetup.com/apache-cassandra-bay-area/events/303469006/">Meetup page</a></p>
+
+  </div>
+
+  <p class="post-back"><a href="/talks/">&larr; All talks</a></p>
+</article>
+
+    </main><footer class="site-footer">
+  <div class="footer-inner">
+    <p class="footer-tagline">Staff Software Engineer at Netflix and founding architect of Netflix&#39;s Data Abstraction Platform. I write and speak about distributed databases, data abstractions, and platform engineering at scale.</p>
+    <ul class="footer-links">
+      
+        <li><a href="https://github.com/vidhyaarvind" rel="me noopener">GitHub</a></li>
+      
+      
+        <li><a href="https://www.linkedin.com/in/vidhya-arvind-11908723/" rel="me noopener">LinkedIn</a></li>
+      
+      
+        <li><a href="https://twitter.com/vidhyaarvind" rel="me noopener">Twitter</a></li>
+      
+      <li><a href="/feed.xml">RSS</a></li>
+    </ul>
+    <p class="footer-copy">&copy; 2026 Vidhya Arvind.</p>
+  </div>
+</footer>
+</body>
+</html>

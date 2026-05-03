@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>How Netflix Delivers Key-Value and Time-Series Storage at Any Scale | Vidhya Arvind</title>
+<meta name="generator" content="Jekyll v4.3.3" />
+<meta property="og:title" content="How Netflix Delivers Key-Value and Time-Series Storage at Any Scale" />
+<meta name="author" content="Vidhya Arvind" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="At Netflix, Apache Cassandra’s bread and butter workloads are wide-column storage for Key-Value and Time-Series use cases, but for those that operate at scale they know that if you just structure your tables naively your clusters will become unstable as partitions or columns grow in size. In this talk, we show how to design reliable APIs and lay out Key-Value and Time-Series data in Apache Cassandra for petabyte scale datasets. For example, most Key-Value data is small, but for large partitions we present a novel technique to dynamically bucket data, providing users with fast access for small data and linearly scalable latency for large values. Next, we will show how to lay out Time-Series datasets with table sharding, time and random bucketing so that large partitions are automatically split while maintaining aggressive latency goals. In addition, since we use tables for data expiration rather than compaction, we can get up to 2x more storage out of the same disk space. By combining fully-idempotent APIs, novel table layouts, bucketing algorithms, and compression schemes Netflix has been able to scale Apache Cassandra usage orders of magnitude further than we could before." />
+<meta property="og:description" content="At Netflix, Apache Cassandra’s bread and butter workloads are wide-column storage for Key-Value and Time-Series use cases, but for those that operate at scale they know that if you just structure your tables naively your clusters will become unstable as partitions or columns grow in size. In this talk, we show how to design reliable APIs and lay out Key-Value and Time-Series data in Apache Cassandra for petabyte scale datasets. For example, most Key-Value data is small, but for large partitions we present a novel technique to dynamically bucket data, providing users with fast access for small data and linearly scalable latency for large values. Next, we will show how to lay out Time-Series datasets with table sharding, time and random bucketing so that large partitions are automatically split while maintaining aggressive latency goals. In addition, since we use tables for data expiration rather than compaction, we can get up to 2x more storage out of the same disk space. By combining fully-idempotent APIs, novel table layouts, bucketing algorithms, and compression schemes Netflix has been able to scale Apache Cassandra usage orders of magnitude further than we could before." />
+<link rel="canonical" href="http://localhost:4000/2023/12/12/cassandra-summit/" />
+<meta property="og:url" content="http://localhost:4000/2023/12/12/cassandra-summit/" />
+<meta property="og:site_name" content="Vidhya Arvind" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-12-12T15:51:11-08:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="How Netflix Delivers Key-Value and Time-Series Storage at Any Scale" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Vidhya Arvind"},"dateModified":"2023-12-12T15:51:11-08:00","datePublished":"2023-12-12T15:51:11-08:00","description":"At Netflix, Apache Cassandra’s bread and butter workloads are wide-column storage for Key-Value and Time-Series use cases, but for those that operate at scale they know that if you just structure your tables naively your clusters will become unstable as partitions or columns grow in size. In this talk, we show how to design reliable APIs and lay out Key-Value and Time-Series data in Apache Cassandra for petabyte scale datasets. For example, most Key-Value data is small, but for large partitions we present a novel technique to dynamically bucket data, providing users with fast access for small data and linearly scalable latency for large values. Next, we will show how to lay out Time-Series datasets with table sharding, time and random bucketing so that large partitions are automatically split while maintaining aggressive latency goals. In addition, since we use tables for data expiration rather than compaction, we can get up to 2x more storage out of the same disk space. By combining fully-idempotent APIs, novel table layouts, bucketing algorithms, and compression schemes Netflix has been able to scale Apache Cassandra usage orders of magnitude further than we could before.","headline":"How Netflix Delivers Key-Value and Time-Series Storage at Any Scale","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2023/12/12/cassandra-summit/"},"url":"http://localhost:4000/2023/12/12/cassandra-summit/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/css/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Vidhya Arvind" /><link rel="icon" type="image/png" href="/assets/profile_picture.png">
+</head>
+<body><header class="site-header">
+  <nav class="site-nav">
+    <a class="site-title" href="/">Vidhya Arvind</a>
+    <div class="nav-links"><a class="nav-link" href="/about/">About</a><a class="nav-link" href="/writing/">Writing</a><a class="nav-link" href="/talks/">Talks</a><a class="nav-link" href="https://github.com/vidhyaarvind" rel="me noopener">GitHub</a><a class="nav-link" href="https://www.linkedin.com/in/vidhya-arvind-11908723/" rel="me noopener">LinkedIn</a></div>
+  </nav>
+</header>
+<main class="content" aria-label="Content">
+      <article class="post">
+  <header class="post-header">
+    <h1 class="post-title">How Netflix Delivers Key-Value and Time-Series Storage at Any Scale</h1>
+    <p class="post-meta">
+      <time datetime="2023-12-12T15:51:11-08:00">
+        December 12, 2023
+      </time>
+      
+        &middot;
+        
+          <span class="post-category">talks</span>
+        
+      
+    </p>
+  </header>
+
+  <div class="post-content">
+    <p>At Netflix, Apache Cassandra’s bread and butter workloads are wide-column storage for Key-Value and Time-Series use cases, but for those that operate at scale they know that if you just structure your tables naively your clusters will become unstable as partitions or columns grow in size. In this talk, we show how to design reliable APIs and lay out Key-Value and Time-Series data in Apache Cassandra for petabyte scale datasets. For example, most Key-Value data is small, but for large partitions we present a novel technique to dynamically bucket data, providing users with fast access for small data and linearly scalable latency for large values. Next, we will show how to lay out Time-Series datasets with table sharding, time and random bucketing so that large partitions are automatically split while maintaining aggressive latency goals. In addition, since we use tables for data expiration rather than compaction, we can get up to 2x more storage out of the same disk space. By combining fully-idempotent APIs, novel table layouts, bucketing algorithms, and compression schemes Netflix has been able to scale Apache Cassandra usage orders of magnitude further than we could before.</p>
+
+<p><a href="/assets/cassandra_summit_how_netflix_delivers_key_value_and_time_series_storages_at_any_scale.pdf">Slides</a></p>
+
+<p><a href="https://www.youtube.com/watch?v=sQ-_jFgOBng&amp;t=1s" title="Cassandra Summit 2023"><img src="http://img.youtube.com/vi/sQ-_jFgOBng/0.jpg" alt="Cassandra Summit 2023" /></a></p>
+
+
+  </div>
+
+  <p class="post-back"><a href="/talks/">&larr; All talks</a></p>
+</article>
+
+    </main><footer class="site-footer">
+  <div class="footer-inner">
+    <p class="footer-tagline">Staff Software Engineer at Netflix and founding architect of Netflix&#39;s Data Abstraction Platform. I write and speak about distributed databases, data abstractions, and platform engineering at scale.</p>
+    <ul class="footer-links">
+      
+        <li><a href="https://github.com/vidhyaarvind" rel="me noopener">GitHub</a></li>
+      
+      
+        <li><a href="https://www.linkedin.com/in/vidhya-arvind-11908723/" rel="me noopener">LinkedIn</a></li>
+      
+      
+        <li><a href="https://twitter.com/vidhyaarvind" rel="me noopener">Twitter</a></li>
+      
+      <li><a href="/feed.xml">RSS</a></li>
+    </ul>
+    <p class="footer-copy">&copy; 2026 Vidhya Arvind.</p>
+  </div>
+</footer>
+</body>
+</html>
